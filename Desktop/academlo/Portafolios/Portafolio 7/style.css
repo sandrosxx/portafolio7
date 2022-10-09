@@ -1,0 +1,272 @@
+:root{
+  --color1: #020403;
+  --color2: #ADADAD;
+  --color4: #583a2b4b;
+  --color3: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+  background-color: var(--color1);
+}
+
+body {
+  font-size: 18px;
+  font-weight:regular;;
+  display: flex;
+}
+@media (min-width: 768px) {
+  body {
+    font-size: 16px;
+    font-weight: regular;
+    display: block;
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 50px;
+  position: fixed;
+  padding: 10px;
+  width: 90%;
+}
+@media (min-width: 768px) {
+  nav {
+    justify-content: space-around;
+    justify-items: center;
+  }
+}
+
+.menu {
+  position: relative;
+  background-color: var(--color1);
+  left: 0;
+  width: 100%;
+  top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  gap: 0.5rem;
+  transform: translateX(200%);
+  transition: transform 0.5s;
+}
+@media (min-width: 768px) {
+  .menu {
+    position: static;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    padding: 0;
+    width: auto;
+    gap: 4rem;
+    transform: translateX(0);
+  }
+}
+.menu li {
+  list-style: none;
+  
+}
+.menu a {
+  text-decoration: none;
+  color: var(--color3);
+  font-size: 10px;
+}
+.icon_menu {
+  display: none;
+ 
+}
+@media (mmin-width: 768px) {
+  .icon_menu {
+  display: block;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--color3);
+}
+}
+.menu_show {
+  transform: translateX(0);
+}
+.menu .active {
+  color: var(--color2);
+}
+.menu a:hover {
+  background-color: var(--color3);
+  color: var(--color1);
+  border-radius: 5%;
+  transition: ease-in 0.4s;
+}
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+  text-align: center;
+}
+.imagen img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50rem;
+}
+.icons {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.white {
+  color: var(--color3);
+}
+.gray {
+  color: var(--color2);
+}
+h1 {
+    font-weight: semibold;
+    font-size: 150px;
+    display: none;
+}
+@media (min-width: 768px) {
+  h1  {
+    font-size: 40px;
+    font-weight: semibold;
+    display: block;
+  }
+}
+.subTitle {
+  font-weight: medium;
+  font-size: 50px;
+  display: none;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .subTitle {
+    font-weight: medium;
+    font-size: 25px;
+    display: block;
+  }
+}
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+  padding: 0 20px 0 20px;
+}
+.habilidades {
+  text-align: center;
+  padding: 20px;
+}
+.habilidad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .habilidad {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+  }
+}
+.habilidad img {
+  border-radius: 50%;
+  background-color: var(--color4);
+  padding: 15px;
+}
+.padre {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 10px;
+  gap: 1rem;
+}
+.padre .hijo:nth-child(2n) {
+  text-align: left;
+}
+.padre .hijo:nth-child(2n+1) {
+  text-align: center;
+  padding: 0.5rem;
+}
+.portafolio__img_hijo img {
+  min-width: 2569000px;
+  min-height: 2569000px;
+}
+.portafolio__img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .portafolio__img {
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 1rem;
+  } 
+}
+@media (min-width: 768px) {
+  .contacto {
+    text-align: center;
+  }
+.portafolio {
+    text-align: center;
+  }
+}
+.contactoCardmaximo {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+@media (min-width: 768px) {
+  .contactoCardmaximo {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    padding: 2rem;
+  }
+}
+.contactoCardmaximo .contactoCard {
+  text-align: center;
+}
+.contactoCardmaximo .contactoCard img {
+  padding: 10px;
+  border-radius: 50%;
+  border: solid 1px;
+  border-color: var(--color3);
+}
+.center {
+  text-align: center;
+  padding: 10px;
+}
+.subSection {
+  font-size: 18px;
+  font-weight: regular;
+  display: none;
+}
+@media (min-width: 768px) {
+  .subSection {
+    font-size: 18px;
+    font-weight: regular;
+    display: block;
+  }
+}
+
